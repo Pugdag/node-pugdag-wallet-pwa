@@ -1,0 +1,68 @@
+{
+  "name": "@pugdag/wallet-pwa",
+  "version": "1.0.0",
+  "codename": "",
+  "description": "Pugdag Wallet PWA",
+  "main": "pwa.js",
+  "scripts": {
+    "prepare": "npx webpack",
+    "prepublishOnly": "rm -rf ./dist && rm -f package-lock.json && npm install --also=dev",
+    "startserver": "node pwa.js --grpc 127.0.0.1:26589 --mainnet --debug --verbose --host 0.0.0.0"
+  },
+  "authors": [
+    {
+      "name": "ASPECTRON Inc."
+    },
+    {
+      "name": "Pugdag Developers"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@aspectron/flow-grpc-web": ">=0.0.7",
+    "@aspectron/flow-http": ">=0.2.19",
+    "@aspectron/flow-logger": "^1.0.4",
+    "@aspectron/flow-router": "*",
+    "@aspectron/flow-utils": "*",
+    "@aspectron/flow-ux": "1.1.1",
+    "@aspectron/web-worker": "^1.0.0",
+    "@grpc/grpc-js": "*",
+    "@pugdag/grpc": "github:Pugdag/node-pugdag-grpc",
+    "@pugdag/grpc-node": "github:Pugdag/node-pugdag-grpc-node",
+    "@pugdag/grpc-web": "github:Pugdag/node-pugdag-grpc-web",
+    "@pugdag/ux": "github:Pugdag/node-pugdag-ux",
+    "@pugdag/wallet": "github:Pugdag/node-pugdag-wallet",
+    "@pugdag/wallet-worker": "github:Pugdag/node-pugdag-wallet-worker",
+    "@webcomponents/webcomponentsjs": "2.6.0",
+    "bitcore-mnemonic": "^10.0.23",
+    "buffer": "6.0.3",
+    "cloudflare": "2.9.1",
+    "colors": "1.4.0",
+    "commander": "6.2.1",
+    "cookie": "0.5.0",
+    "cookie-signature": "1.2.0",
+    "crypto-js": "^4.2.0",
+    "decimal.js": "10.4.0",
+    "express": "4.17.1",
+    "express-session": "1.17.1",
+    "lit-element": "3.2.2",
+    "lit-html": "2.7.2",
+    "node-fetch": "2.6.7",
+    "secp256k1-wasm": ">=2.0.0",
+    "sockjs": "0.3.24",
+    "sockjs-client": "1.6.1",
+    "url": "0.11.0",
+    "ws": "7.5.9"
+  },
+  "devDependencies": {
+    "acorn": "8.8.0",
+    "ajv": "6.12.6",
+    "assert": "2.0.0",
+    "crypto-browserify": "3.12.0",
+    "process": "0.11.10",
+    "stream-browserify": "3.0.0",
+    "webpack": "5.78.0",
+    "webpack-cli": "4.10.0",
+    "workbox-webpack-plugin": "6.5.4"
+  }
+}
